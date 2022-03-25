@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.graphics.Color"/>
+        <variable
+            name="data"
+            type="com.nghiemtuananh.baitapappdocbaot3h.TrangBao" />
+    </data>
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:background="@{data.isChoose ? Color.BLUE : Color.TRANSPARENT}"
+    android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_margin="12dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="12dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="112dp"
+            android:scaleType="fitXY"
+            app:addImage="@{data.image}"
+            android:layout_height="72dp"/>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
+</layout>
